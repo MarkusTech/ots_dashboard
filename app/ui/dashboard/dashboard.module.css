@@ -3,7 +3,8 @@
 }
 
 .menu{
-    flex: 1;
+    display: flex;
+    /* flex: 1; */
     background-color: var(--bgSoft);
     padding: 20px;
 }
