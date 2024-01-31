@@ -1,5 +1,6 @@
 import styles from "./sidebar.module.css"
 import MenuLink from "./menuLink/menuLink"
+import Image from "next/image";
 import {
   MdDashboard,
   MdSupervisedUserCircle,
@@ -79,16 +80,28 @@ const menuItems = [
 const Sidebar = () => {
   return (
     <div className={styles.container}>
-      <ul>
+
+      <div className={styles.user}>
+        <Image className={styles.userImage} src={"/noavatar.png"} alt="" width="50" height="50" />
+
+        <div className={styles.userDetail}>
+          <span className={styles.username}>Wenn Mark Recopelacion</span>
+          <span className={styles.userTitle}>Administrator</span>
+        </div>
+
+      </div>
+
+      <ul className={styles.listt}>
         {menuItems.map((cat) => (
           <li key={cat.title}>
             <span className={styles.cat}>{cat.title}</span>
             {cat.list.map((item) => (
-             <MenuLink item={item} key={item.title} />
+              <MenuLink item={item} key={item.title} />
             ))}
           </li>
         ))}
       </ul>
+
     </div>
   )
 };
