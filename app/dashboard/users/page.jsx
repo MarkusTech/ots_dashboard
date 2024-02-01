@@ -35,6 +35,7 @@ const UserPage = () => {
                   height={40}
                   className={styles.userImage}
                 />
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>wm.recopelacion@gmail.com</td>
@@ -64,6 +65,7 @@ const UserPage = () => {
                   height={40}
                   className={styles.userImage}
                 />
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>wm.recopelacion@gmail.com</td>
@@ -93,6 +95,7 @@ const UserPage = () => {
                   height={40}
                   className={styles.userImage}
                 />
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>wm.recopelacion@gmail.com</td>
@@ -122,6 +125,7 @@ const UserPage = () => {
                   height={40}
                   className={styles.userImage}
                 />
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>wm.recopelacion@gmail.com</td>
@@ -151,6 +155,7 @@ const UserPage = () => {
                   height={40}
                   className={styles.userImage}
                 />
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>wm.recopelacion@gmail.com</td>
@@ -180,6 +185,7 @@ const UserPage = () => {
                   height={40}
                   className={styles.userImage}
                 />
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>wm.recopelacion@gmail.com</td>
@@ -209,6 +215,7 @@ const UserPage = () => {
                   height={40}
                   className={styles.userImage}
                 />
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>wm.recopelacion@gmail.com</td>
