@@ -16,6 +16,7 @@ const AddProductPage = () => {
         <input type="text" placeholder="color" name="color" />
         <input type="text" placeholder="size" name="size" />
         <textarea name="desc" id="desc" rows="16"></textarea>
+        <button type="submit">Save</button>
       </form>
     </div>
   );

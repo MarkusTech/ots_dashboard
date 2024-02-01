@@ -15,6 +15,7 @@ const addTransaction = () => {
         <input type="number" placeholder="Price" name="price" />
         <input type="number" placeholder="Oum" name="oum" />
         <textarea name="desc" id="desc" rows="16"></textarea>
+        <button type="submit">Save</button>
       </form>
     </div>
   );
