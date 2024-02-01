@@ -13,7 +13,7 @@ const addTransaction = () => {
         </select>
         <input type="text" placeholder="Item Name" name="itemname" />
         <input type="number" placeholder="Price" name="price" />
-        <input type="number" placeholder="Oum" name="oum" />
+        <input type="number" placeholder="Unit of measurement" name="oum" />
         <textarea name="desc" id="desc" rows="16"></textarea>
         <button type="submit">Save</button>
       </form>
