@@ -8,19 +8,19 @@ const Transaction = () => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a product..." />
-        <Link href="/dashboard/products/add">
+        <Search placeholder="Search for a transaction..." />
+        <Link href="/dashboard/transactions/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
       </div>
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>Title</td>
-            <td>Description</td>
+            <td>Item Code</td>
+            <td>Item Name</td>
+            <td>Uom</td>
+            <td>Category</td>
             <td>Price</td>
-            <td>Created At</td>
-            <td>Stock</td>
             <td>Action</td>
           </tr>
         </thead>
@@ -35,13 +35,13 @@ const Transaction = () => {
                   height={40}
                   className={styles.transactionImage}
                 />
-                Ginamos
+                123
               </div>
             </td>
-            <td>Description</td>
-            <td>₱,1000,000</td>
-            <td>02.01.2024</td>
-            <td>72</td>
+            <td>Cement</td>
+            <td>unknown</td>
+            <td>unknown</td>
+            <td>210</td>
             <td>
               <div className={styles.buttons}>
                 <Link href="/">
