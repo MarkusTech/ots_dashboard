@@ -25,7 +25,7 @@ const Transaction = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>
@@ -46,7 +46,7 @@ const Transaction = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>
@@ -65,7 +65,7 @@ const Transaction = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>
@@ -86,7 +86,7 @@ const Transaction = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Wenn Mark Recopelacion
               </div>
             </td>
             <td>
