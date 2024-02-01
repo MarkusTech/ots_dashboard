@@ -1,5 +1,6 @@
 import styles from "../../ui/dashboard/users/users.module.css";
 import Search from "../../ui/dashboard/search/search";
+import Pagination from "../../ui/dashboard/pagination/pagination";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -53,8 +54,183 @@ const UserPage = () => {
               </div>
             </td>
           </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+              </div>
+            </td>
+            <td>wm.recopelacion@gmail.com</td>
+            <td>02.01.2024</td>
+            <td>Admin</td>
+            <td>Active</td>
+            <td>
+              <div className={styles.buttons}>
+                <Link href="/">
+                  <button className={`${styles.button} ${styles.view}`}>
+                    View
+                  </button>
+                </Link>
+                <button className={`${styles.button} ${styles.delete}`}>
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+              </div>
+            </td>
+            <td>wm.recopelacion@gmail.com</td>
+            <td>02.01.2024</td>
+            <td>Admin</td>
+            <td>Active</td>
+            <td>
+              <div className={styles.buttons}>
+                <Link href="/">
+                  <button className={`${styles.button} ${styles.view}`}>
+                    View
+                  </button>
+                </Link>
+                <button className={`${styles.button} ${styles.delete}`}>
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+              </div>
+            </td>
+            <td>wm.recopelacion@gmail.com</td>
+            <td>02.01.2024</td>
+            <td>Admin</td>
+            <td>Active</td>
+            <td>
+              <div className={styles.buttons}>
+                <Link href="/">
+                  <button className={`${styles.button} ${styles.view}`}>
+                    View
+                  </button>
+                </Link>
+                <button className={`${styles.button} ${styles.delete}`}>
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+              </div>
+            </td>
+            <td>wm.recopelacion@gmail.com</td>
+            <td>02.01.2024</td>
+            <td>Admin</td>
+            <td>Active</td>
+            <td>
+              <div className={styles.buttons}>
+                <Link href="/">
+                  <button className={`${styles.button} ${styles.view}`}>
+                    View
+                  </button>
+                </Link>
+                <button className={`${styles.button} ${styles.delete}`}>
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+              </div>
+            </td>
+            <td>wm.recopelacion@gmail.com</td>
+            <td>02.01.2024</td>
+            <td>Admin</td>
+            <td>Active</td>
+            <td>
+              <div className={styles.buttons}>
+                <Link href="/">
+                  <button className={`${styles.button} ${styles.view}`}>
+                    View
+                  </button>
+                </Link>
+                <button className={`${styles.button} ${styles.delete}`}>
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+              </div>
+            </td>
+            <td>wm.recopelacion@gmail.com</td>
+            <td>02.01.2024</td>
+            <td>Admin</td>
+            <td>Active</td>
+            <td>
+              <div className={styles.buttons}>
+                <Link href="/">
+                  <button className={`${styles.button} ${styles.view}`}>
+                    View
+                  </button>
+                </Link>
+                <button className={`${styles.button} ${styles.delete}`}>
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
+      <Pagination />
     </div>
   );
 };
