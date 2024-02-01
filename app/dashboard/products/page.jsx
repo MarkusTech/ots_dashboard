@@ -16,7 +16,7 @@ const ProducPage = () => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>Title</td>
+            <td>Product Name</td>
             <td>Description</td>
             <td>Price</td>
             <td>Created At</td>
