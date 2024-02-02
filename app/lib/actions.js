@@ -193,3 +193,47 @@ export const addTransaction = async (formData) => {
   revalidatePath("/dashboard/transactions");
   redirect("/dashboard/transactions");
 };
+
+export const updateTransaction = async (formData) => {
+  const { id, itemCode, itemName, uom, category, price } =
+    Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+
+    const updateFields = {
+      itemCode,
+      itemName,
+      uom,
+      category,
+      price,
+    };
+
+    Object.keys(updateFields).forEach(
+      (key) =>
+        (updateFields[key] === "" || undefined) && delete updateFields[key]
+    );
+
+    await Transaction.findByIdAndUpdate(id, updateFields);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to update transaction!");
+  }
+
+  revalidatePath("/dashboard/transactions");
+  redirect("/dashboard/transactions");
+};
+
+export const deleteTransaction = async (formData) => {
+  const { id } = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+    await Transaction.findByIdAndDelete(id);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to delete transaction!");
+  }
+
+  revalidatePath("/dashboard/transactions");
+};
