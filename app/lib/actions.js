@@ -176,7 +176,7 @@ export const addTransaction = async (formData) => {
   try {
     connectToDB();
 
-    const newTransaction = new Product({
+    const newTransaction = new Transaction({
       itemCode,
       itemName,
       uom,
@@ -187,9 +187,9 @@ export const addTransaction = async (formData) => {
     await newTransaction.save();
   } catch (err) {
     console.log(err);
-    throw new Error("Failed to create product!");
+    throw new Error("Failed to create Transaction!");
   }
 
-  revalidatePath("/dashboard/products");
-  redirect("/dashboard/products");
+  revalidatePath("/dashboard/transactions");
+  redirect("/dashboard/transactions");
 };
