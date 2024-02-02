@@ -3,7 +3,6 @@
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
-  height: 75vh;
 }
 
 .form {
@@ -40,7 +39,4 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* this just for now */
-  padding-top: 50px;
-  margin-top: 250px;
 }
