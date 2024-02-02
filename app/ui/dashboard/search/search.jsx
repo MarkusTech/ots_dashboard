@@ -37,3 +37,5 @@ const Search = ({ placeholder }) => {
 };
 
 export default Search;
+
+// 2:08
