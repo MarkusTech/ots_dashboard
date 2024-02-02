@@ -44,7 +44,7 @@ const Transaction = () => {
             <td>210</td>
             <td>
               <div className={styles.buttons}>
-                <Link href="/">
+                <Link href="/dashboard/transactions/test">
                   <button className={`${styles.button} ${styles.view}`}>
                     View
                   </button>

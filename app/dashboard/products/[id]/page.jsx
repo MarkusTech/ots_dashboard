@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../../ui/dashboard/products/singleProduct/singleProduct.module.css";
 
-const SingleProductPage = () => {
+const SingleProductPage = ({ params }) => {
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
