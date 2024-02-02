@@ -11,6 +11,8 @@ const UsersPage = async ({ searchParams }) => {
   const page = searchParams?.page || 1;
   const { count, users } = await fetchUsers(q, page);
 
+  console.log(users);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -56,6 +58,7 @@ const UsersPage = async ({ searchParams }) => {
                       View
                     </button>
                   </Link>
+
                   <form action={deleteUser}>
                     <input type="hidden" name="id" value={user.id} />
                     <button className={`${styles.button} ${styles.delete}`}>
