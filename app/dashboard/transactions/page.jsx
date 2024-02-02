@@ -3,8 +3,15 @@ import Search from "../../ui/dashboard/search/search";
 import Pagination from "../../ui/dashboard/pagination/pagination";
 import Link from "next/link";
 import Image from "next/image";
+import { fetchTransactions } from "../../lib/data";
 
-const Transaction = () => {
+const Transaction = async ({ searchParams }) => {
+  const q = searchParams?.q || "";
+  const page = searchParams?.page || 1;
+  const { transactions } = await fetchTransactions(q, page);
+
+  console.log(transactions);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
