@@ -12,6 +12,7 @@ export const fetchUsers = async (q, page) => {
     const users = await User.find({ username: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
+
     return { count, users };
   } catch (err) {
     console.log(err);

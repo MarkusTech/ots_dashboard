@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { fetchUsers } from "../../lib/data";
+// import { deleteUser } from "../../lib/actions";
 
 const UserPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
