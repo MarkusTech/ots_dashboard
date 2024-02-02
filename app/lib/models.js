@@ -39,6 +39,35 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+const transactionSchema = new mongoose.Schema(
+  {
+    itemCode: {
+      type: String,
+      required: true,
+      unique: true,
+      min: 3,
+      max: 20,
+    },
+    itemName: {
+      type: String,
+      required: true,
+    },
+    uom: {
+      type: Number,
+      required: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
+
 const productSchema = new mongoose.Schema(
   {
     title: {
@@ -74,5 +103,10 @@ const productSchema = new mongoose.Schema(
 );
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
+
 export const Product =
   mongoose.models.Product || mongoose.model("Product", productSchema);
+
+export const Transaction =
+  mongoose.models.Transaction ||
+  mongoose.model("Transaction", transactionSchema);
