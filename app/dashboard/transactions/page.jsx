@@ -4,6 +4,7 @@ import Pagination from "../../ui/dashboard/pagination/pagination";
 import Link from "next/link";
 import Image from "next/image";
 import { fetchTransactions } from "../../lib/data";
+import { deleteTransaction } from "../../lib/actions";
 
 const Transaction = async ({ searchParams }) => {
   const q = searchParams?.q || "";
@@ -52,14 +53,17 @@ const Transaction = async ({ searchParams }) => {
               <td>{data.price}</td>
               <td>
                 <div className={styles.buttons}>
-                  <Link href="/dashboard/transactions/test">
+                  <Link href={`/dashboard/transactions/${data.id}`}>
                     <button className={`${styles.button} ${styles.view}`}>
                       View
                     </button>
                   </Link>
-                  <button className={`${styles.button} ${styles.delete}`}>
-                    Delete
-                  </button>
+                  <form action={deleteTransaction}>
+                    <input type="hidden" name="id" value={data.id} />
+                    <button className={`${styles.button} ${styles.delete}`}>
+                      Delete
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>
