@@ -72,8 +72,10 @@ export const fetchTransactions = async (q, page) => {
 
   try {
     connectToDB();
-    const count = await Transaction.find({ title: { $regex: regex } }).count();
-    const transactions = await Transaction.find({ title: { $regex: regex } })
+    const count = await Transaction.find({
+      itemCode: { $regex: regex },
+    }).count();
+    const transactions = await Transaction.find({ itemCode: { $regex: regex } })
       .limit(ITEM_PER_PAGE)
       .skip(ITEM_PER_PAGE * (page - 1));
     return { count, transactions };

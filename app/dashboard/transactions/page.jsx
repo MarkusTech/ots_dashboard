@@ -10,7 +10,7 @@ const Transaction = async ({ searchParams }) => {
   const page = searchParams?.page || 1;
   const { transactions } = await fetchTransactions(q, page);
 
-  console.log(transactions);
+  // console.log(transactions);
 
   return (
     <div className={styles.container}>
@@ -32,36 +32,38 @@ const Transaction = async ({ searchParams }) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <div className={styles.transaction}>
-                <Image
-                  src="/noproduct.jpg"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.transactionImage}
-                />
-                123
-              </div>
-            </td>
-            <td>Cement</td>
-            <td>unknown</td>
-            <td>unknown</td>
-            <td>210</td>
-            <td>
-              <div className={styles.buttons}>
-                <Link href="/dashboard/transactions/test">
-                  <button className={`${styles.button} ${styles.view}`}>
-                    View
+          {transactions.map((data) => (
+            <tr key={data.id}>
+              <td>
+                <div className={styles.transaction}>
+                  <Image
+                    src="/noproduct.jpg"
+                    alt=""
+                    width={40}
+                    height={40}
+                    className={styles.transactionImage}
+                  />
+                  {data.itemCode}
+                </div>
+              </td>
+              <td>{data.itemName}</td>
+              <td>{data.uom}</td>
+              <td>{data.category}</td>
+              <td>{data.price}</td>
+              <td>
+                <div className={styles.buttons}>
+                  <Link href="/dashboard/transactions/test">
+                    <button className={`${styles.button} ${styles.view}`}>
+                      View
+                    </button>
+                  </Link>
+                  <button className={`${styles.button} ${styles.delete}`}>
+                    Delete
                   </button>
-                </Link>
-                <button className={`${styles.button} ${styles.delete}`}>
-                  Delete
-                </button>
-              </div>
-            </td>
-          </tr>
+                </div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
       <Pagination />
