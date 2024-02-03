@@ -1,19 +1,20 @@
 import styles from "../../../../app/ui/dashboard/dtransaction/addTransaction/addTrasaction.module.css";
+import { addTransaction } from "../../../lib/actions";
 
-const addTransaction = () => {
+const addTransactionPage = () => {
   return (
     <div className={styles.container}>
-      <form action="" className={styles.form}>
-        <input type="text" placeholder="Item Code" name="itemcode" required />
-        <select name="cat" id="cat">
-          <option value="general">Choose a Category</option>
-          <option value="kitchen">Computer</option>
-          <option value="phone">Phone</option>
-          <option value="food">Food</option>
-        </select>
-        <input type="text" placeholder="Item Name" name="itemname" />
-        <input type="number" placeholder="Price" name="price" />
-        <input type="number" placeholder="Unit of measurement" name="oum" />
+      <form action={addTransaction} className={styles.form}>
+        <input type="text" placeholder="Item Code" name="itemCode" required />
+        <input type="text" placeholder="Category" name="category" required />
+        <input type="text" placeholder="Item Name" name="itemName" required />
+        <input type="number" placeholder="Price" name="price" required />
+        <input
+          type="number"
+          placeholder="Unit of measurement"
+          name="uom"
+          required
+        />
         {/* <textarea name="desc" id="desc" rows="16"></textarea> */}
         <button type="submit">Save</button>
       </form>
@@ -21,4 +22,4 @@ const addTransaction = () => {
   );
 };
 
-export default addTransaction;
+export default addTransactionPage;

@@ -8,7 +8,7 @@ import { fetchTransactions } from "../../lib/data";
 const Transaction = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
-  const { transactions } = await fetchTransactions(q, page);
+  const { count, transactions } = await fetchTransactions(q, page);
 
   // console.log(transactions);
 
@@ -66,7 +66,7 @@ const Transaction = async ({ searchParams }) => {
           ))}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination count={count} />
     </div>
   );
 };

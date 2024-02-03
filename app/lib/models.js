@@ -45,8 +45,6 @@ const transactionSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-      min: 3,
-      max: 20,
     },
     itemName: {
       type: String,
