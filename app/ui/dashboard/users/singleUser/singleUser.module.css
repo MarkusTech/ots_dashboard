@@ -12,6 +12,7 @@
   font-weight: bold;
   color: var(--textSoft);
   height: max-content;
+  text-align: center;
 }
 
 .imgContainer {
