@@ -1,6 +1,7 @@
 import styles from "../../../ui/dashboard/dtransaction/singleTransaction/singleTransaction.module.css";
 import Image from "next/image";
 import { fetchTransaction } from "../../../lib/data";
+import { updateTransaction } from "../../../lib/actions";
 
 const SingleTransactionPage = async ({ params }) => {
   const { id } = params;
@@ -16,7 +17,7 @@ const SingleTransactionPage = async ({ params }) => {
         {data.itemName}
       </div>
       <div className={styles.formContainer}>
-        <form action="" className={styles.form}>
+        <form action={updateTransaction} className={styles.form}>
           <input type="hidden" name="itemname" value={data.itemName} />
           <label>Item Name</label>
           <input type="text" name="itemname" placeholder={data.itemName} />
