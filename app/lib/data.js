@@ -68,7 +68,7 @@ export const fetchTransactions = async (q, page) => {
   console.log(q);
   const regex = new RegExp(q, "i");
 
-  const ITEM_PER_PAGE = 2; // number of data display in the table
+  const ITEM_PER_PAGE = 10; // number of data display in the table
 
   try {
     connectToDB();

@@ -5,9 +5,8 @@ import { updateTransaction } from "../../../lib/actions";
 
 const SingleTransactionPage = async ({ params }) => {
   const { id } = params;
-  const transaction = await fetchTransaction(id);
+  const data = await fetchTransaction(id);
 
-  const data = transaction;
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
@@ -18,9 +17,11 @@ const SingleTransactionPage = async ({ params }) => {
       </div>
       <div className={styles.formContainer}>
         <form action={updateTransaction} className={styles.form}>
-          <input type="hidden" name="itemname" value={data.itemName} />
+          <input type="hidden" name="id" value={data.id} />
+          <label>Item Code</label>
+          <input type="text" name="itemCode" placeholder={data.itemCode} />
           <label>Item Name</label>
-          <input type="text" name="itemname" placeholder={data.itemName} />
+          <input type="text" name="itemName" placeholder={data.itemName} />
           <label>Unit of measure</label>
           <input type="text" name="uom" placeholder={data.uom} />
           <label>Category</label>
